@@ -16,9 +16,11 @@ internal class BottomSheetConfiguration: Equatable {
         return lhs.animation == rhs.animation &&
         lhs.backgroundBlurMaterial == rhs.backgroundBlurMaterial &&
         lhs.backgroundViewID == rhs.backgroundViewID &&
+        lhs.fullScreenBackgroundViewID == rhs.fullScreenBackgroundViewID &&
         lhs.dragIndicatorColor == rhs.dragIndicatorColor &&
         lhs.isAppleScrollBehaviorEnabled == rhs.isAppleScrollBehaviorEnabled &&
         lhs.isBackgroundBlurEnabled == rhs.isBackgroundBlurEnabled &&
+        lhs.isBackgroundOpacityAutoChange == rhs.isBackgroundOpacityAutoChange &&
         lhs.isCloseButtonShown == rhs.isCloseButtonShown &&
         lhs.isContentDragEnabled == rhs.isContentDragEnabled &&
         lhs.isDragIndicatorShown == rhs.isDragIndicatorShown &&
@@ -39,6 +41,8 @@ internal class BottomSheetConfiguration: Equatable {
     var backgroundBlurMaterial: VisualEffect = .system
     var backgroundViewID: UUID?
     var backgroundView: AnyView?
+    var fullScreenBackgroundViewID: UUID?
+    var fullScreenBackgroundView: AnyView?
     var dragIndicatorAction: ((GeometryProxy) -> Void)?
     var dragIndicatorColor: Color = Color.tertiaryLabel
     var dragPositionSwitchAction: ((
@@ -47,6 +51,7 @@ internal class BottomSheetConfiguration: Equatable {
     ) -> Void)?
     var isAppleScrollBehaviorEnabled: Bool = false
     var isBackgroundBlurEnabled: Bool = false
+    var isBackgroundOpacityAutoChange: Bool = true
     var isCloseButtonShown: Bool = false
     var isContentDragEnabled: Bool = false
     var isDragIndicatorShown: Bool = true

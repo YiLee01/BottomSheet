@@ -36,4 +36,10 @@ public extension BottomSheet {
         self.configuration.backgroundBlurMaterial = material
         return self
     }
+    
+    /// Changes the full screen background's opacity for auto.
+    func enableBackgroundOpacityAutoChange(_ bool: Bool = true) -> BottomSheet {
+        self.configuration.isBackgroundOpacityAutoChange = bool
+        return self
+    }
 }

@@ -1,13 +1,13 @@
 Pod::Spec.new do |spec|
   spec.name                   = 'BottomSheetSwiftUI'
-  spec.version                = '3.1.1'
+  spec.version                = '3.1.2'
   spec.swift_version          = '5.5'
   spec.authors                = { 'Lucas Zischka' => 'lucas_zischka@outlook.com' }
   spec.license                = { :type => 'MIT', :file => 'LICENSE.txt' }
-  spec.homepage               = 'https://github.com/lucaszischka/BottomSheet'
-  spec.readme                 = 'https://github.com/lucaszischka/BottomSheet/blob/main/README.md'
-  spec.changelog              = 'https://github.com/lucaszischka/BottomSheet/blob/main/CHANGELOG.md'
-  spec.source                 = { :git => 'https://github.com/lucaszischka/BottomSheet.git',
+  spec.homepage               = 'https://github.com/YiLee01/BottomSheet'
+  spec.readme                 = 'https://github.com/YiLee01/BottomSheet/blob/main/README.md'
+  spec.changelog              = 'https://github.com/YiLee01/BottomSheet/blob/main/CHANGELOG.md'
+  spec.source                 = { :git => 'https://github.com/YiLee01/BottomSheet.git',
                                   :tag => spec.version.to_s }
   spec.summary                = 'A sliding sheet from the bottom of the screen with custom states build with SwiftUI.'
   spec.screenshots            = [ 'https://user-images.githubusercontent.com/63545066/132514316-c0d723c6-37fc-4104-b04c-6cf7bbcb0899.gif',

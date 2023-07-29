@@ -55,7 +55,6 @@ internal struct BottomSheetView<HContent: View, MContent: View>: View {
                 if !self.bottomSheetPosition.isHidden {
                     // Full screen background for aligning and used by `backgroundBlur` and `tapToDismiss`
                     self.fullScreenBackground(with: geometry)
-                    
                     // The BottomSheet itself
                     self.bottomSheet(with: geometry)
                 }
