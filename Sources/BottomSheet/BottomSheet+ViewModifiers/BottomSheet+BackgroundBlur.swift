@@ -42,4 +42,10 @@ public extension BottomSheet {
         self.configuration.isBackgroundOpacityAutoChange = bool
         return self
     }
+    
+    /// 全屏背景颜色
+    func fullScreenColor(_ color: Color = Color.black.opacity(0.7)) -> BottomSheet {
+        self.configuration.fullScreenBackgroundColor = color
+        return self
+    }
 }

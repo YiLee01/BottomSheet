@@ -104,7 +104,7 @@ public enum VisualEffect: Equatable, Hashable {
 }
 
 #if os(iOS) || targetEnvironment(macCatalyst)
-fileprivate extension VisualEffect {
+public extension VisualEffect {
     var blurStyle: UIBlurEffect.Style {
         switch self {
         case .system:      return .systemMaterial
@@ -138,7 +138,7 @@ fileprivate extension VisualEffect {
     }
 }
 #elseif os(macOS)
-fileprivate extension VisualEffect {
+public extension VisualEffect {
     var material: NSVisualEffectView.Material {
         switch self {
         case .system, .systemLight, .systemDark:
@@ -185,7 +185,7 @@ fileprivate extension VisualEffect {
 #endif
 
 #if os(macOS)
-internal struct VisualEffectView: NSViewRepresentable {
+public struct VisualEffectView: NSViewRepresentable {
     
     var visualEffect: VisualEffect
     
@@ -227,11 +227,11 @@ internal struct VisualEffectView: NSViewRepresentable {
     }
 }
 #elseif canImport(UIKit)
-internal struct VisualEffectView: UIViewRepresentable {
+public struct VisualEffectView: UIViewRepresentable {
     
     var visualEffect: VisualEffect
     
-    func makeUIView(context: Context) -> UIVisualEffectView {
+    public func makeUIView(context: Context) -> UIVisualEffectView {
         let view = UIVisualEffectView(effect: UIBlurEffect(style: self.visualEffect.blurStyle))
         view.autoresizingMask = [
             .flexibleWidth,
@@ -240,7 +240,7 @@ internal struct VisualEffectView: UIViewRepresentable {
         return view
     }
     
-    func updateUIView(
+    public func updateUIView(
         _ uiView: UIVisualEffectView,
         context: Context
     ) {

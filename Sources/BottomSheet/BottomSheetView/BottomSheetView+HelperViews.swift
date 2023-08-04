@@ -12,8 +12,7 @@ internal extension BottomSheetView {
     func fullScreenBackground(with geometry: GeometryProxy) -> some View {
         Group {
             if !self.configuration.isBackgroundBlurEnabled {
-                Color.black.opacity(0.5)
-                
+                self.configuration.fullScreenBackgroundColor
             } else {
                 VisualEffectView(visualEffect: self.configuration.backgroundBlurMaterial)
             }

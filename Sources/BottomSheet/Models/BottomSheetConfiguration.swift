@@ -17,6 +17,7 @@ internal class BottomSheetConfiguration: Equatable {
         lhs.backgroundBlurMaterial == rhs.backgroundBlurMaterial &&
         lhs.backgroundViewID == rhs.backgroundViewID &&
         lhs.fullScreenBackgroundViewID == rhs.fullScreenBackgroundViewID &&
+        lhs.fullScreenBackgroundColor == rhs.fullScreenBackgroundColor &&
         lhs.dragIndicatorColor == rhs.dragIndicatorColor &&
         lhs.isAppleScrollBehaviorEnabled == rhs.isAppleScrollBehaviorEnabled &&
         lhs.isBackgroundBlurEnabled == rhs.isBackgroundBlurEnabled &&
@@ -43,6 +44,7 @@ internal class BottomSheetConfiguration: Equatable {
     var backgroundView: AnyView?
     var fullScreenBackgroundViewID: UUID?
     var fullScreenBackgroundView: AnyView?
+    var fullScreenBackgroundColor: Color = Color.black.opacity(0.7)
     var dragIndicatorAction: ((GeometryProxy) -> Void)?
     var dragIndicatorColor: Color = Color.tertiaryLabel
     var dragPositionSwitchAction: ((
